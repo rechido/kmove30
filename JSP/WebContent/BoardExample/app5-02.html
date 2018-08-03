@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>회원등록</title>
+</head>
+
+<body bgcolor="white">
+<form name=form_name method=post>
+<table border=0 cellpadding=0 cellspacing=0 border=0 width=700 valign=top>
+  <tr><td align=center><br>                            
+    <table cellpadding=0 cellspacing=0 border=0 width=630 align=center>       
+      <tr>
+        <td bgcolor="#7AAAD5">            
+          <table cellpadding=0 cellspacing=0 border=0 width=100%>
+            <tr bgcolor=#7AAAD5>
+              <td align=center bgcolor="#7AAAD5"><FONT COLOR="#FFFFFF"><b>사용자등록&nbsp;</b><font color=black>(</font><font color=red>&nbsp;*&nbsp;</font><font color=black>표시항목은 반드시 입력하십시요.)</font></FONT></td>
+            </tr>
+          </table>
+
+          <table cellpadding=3 cellspacing=1 border=0 width=100%>
+            <tr>
+              <td width=110 bgcolor=#EFF4F8>&nbsp;회원 성명<font color=red>*</font></td>
+              <TD BGCOLOR=WHITE>
+                <input type=text name=user_name size=30 maxlength=20 value="">성명은 빈칸없이 입력하세요.
+              </td>
+            </tr>
+            <tr>
+              <TD BGCOLOR="#EFF4F8">&nbsp;주민등록번호<font color=red>&nbsp;*</font></td>
+              <TD BGCOLOR=WHITE>
+                <input type=text name=security_id1 size=6 maxlength=6 value=""> - 
+                <input type=text name=security_id2 size=7 maxlength=7 value="">
+              </td>
+            </tr>
+            <tr>
+              <TD BGCOLOR="#EFF4F8">&nbsp;회원 ID<font color=red>&nbsp;*</font></td>
+              <TD BGCOLOR=WHITE>
+	
+                <table cellspacing=0 cellpadding=0>
+                  <tr>
+                    <td align=absmiddle>
+                      <input type=text name=user_id size=12 maxlength=16 value="" style="width:120">
+                    </td>
+                    <td> 5~16자 이내의 영문이나 숫자만 가능
+                  	</td>
+                  </tr>
+                </table>
+    
+			  </td>
+            </tr>
+            <tr>
+              <TD BGCOLOR="#EFF4F8">&nbsp;비밀번호<font color=red>&nbsp;*</font></td>
+              <TD BGCOLOR=WHITE>
+               <input type=password name=passwd size=8 maxlength=12 style="width:80">
+                  6~12자 이내의 영문이나 숫자만 가능
+              </td>
+            </tr>
+            <tr>
+              <TD BGCOLOR="#EFF4F8">&nbsp;비밀번호확인<font color=red>&nbsp;*</font></td>
+              <TD BGCOLOR=WHITE><input type=password name=repasswd size=8 maxlength=12 value="" style="width:80">비밀번호를 한번 더 입력해주세요. </td>
+            </tr>
+            <tr>
+              <TD BGCOLOR="#EFF4F8">&nbsp;주소구분<font color=red>&nbsp;*</font></td>
+              <TD BGCOLOR=WHITE>
+                <input type=radio name="addr_gubun" value="1" checked>직장(학교)
+                <input type=radio name="addr_gubun" value="2">자택
+              </td>
+            </tr>
+            <tr>
+              <TD BGCOLOR="#EFF4F8">&nbsp;우편번호<font color=red>&nbsp;*</font></td>
+              <TD BGCOLOR=WHITE>
+
+                <table cellspacing=0 cellpadding=0>
+                  <tr>
+                    <td>
+                  	  <input type=text name=zip1 size=3 maxlength=3 >-
+                  	  <input type=text name=zip2 size=3 maxlength=3>
+                  	</td>
+                 </tr>
+               </table>
+
+             </td>
+           </tr>
+           <tr>
+             <TD BGCOLOR="#EFF4F8">&nbsp;주소<font color=red>&nbsp;*</font></td>
+             <TD BGCOLOR=WHITE>
+              <input type=text name=address size=50 maxlength=100 value="">
+             </td>
+           </tr>
+           <tr>
+               <TD BGCOLOR="#EFF4F8">&nbsp;전화번호<font color=red>&nbsp;*</font></td>
+                <TD BGCOLOR=WHITE>
+                  <input type=text name=tel1 size=4 maxlength=4 value="">
+                   - 
+                  <input type=text name=tel2 size=4 maxlength=4 value="">
+                   -
+                  <input type=text name=tel3 size=4 maxlength=4 value="">
+                </td>
+              </tr>
+              <tr> 
+                <TD BGCOLOR="#EFF4F8">&nbsp;휴대전화</td>
+                <TD BGCOLOR=WHITE>
+                  <input type=text name=hand_tel1 size=4 maxlength=4 value="">
+                   - 
+                  <input type=text name=hand_tel2 size=4 maxlength=4 value="">
+                   - 
+                  <input type=text name=hand_tel3 size=4 maxlength=4 value="">
+                </td>
+              </tr>
+              <tr>
+                <TD BGCOLOR="#EFF4F8">&nbsp;E-mail
+                	<font color=red>&nbsp;*</font>
+                </td>
+                <td bgcolor=WHITE valign=middle>
+                  <input type=text name=e_mail size=30 maxlength=30 value="">
+                </td>
+              </tr>
+              <tr>
+                <TD BGCOLOR="#EFF4F8">&nbsp;공개여부<font color=red>&nbsp;*</font></td>
+                <TD BGCOLOR=WHITE>
+                  <input type=radio name="open_yn" value="Y" checked>예 
+                  <input type=radio name="open_yn" value="N">아니오
+                </td>
+              </tr>
+              <tr>
+                <TD BGCOLOR="#EFF4F8">자기소개<font color=red></font></td>
+                <TD BGCOLOR=WHITE>
+                  <textarea cols=65 rows=5 name="intro"></textarea>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </td>
+    </tr>
+
+</table>
+</form>
+</body>
+</html>

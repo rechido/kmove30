@@ -1,0 +1,15 @@
+jsp에서 jdbc 연동해서 DB에 데이터 입력시
+
+html form action으로 입력받은 데이터를 스클립틀릿에서 Connection, Statement 객체로 입력하는 경우
+
+아무런 처리도 안하면 한글 입력 데이터는 깨져 나온다.
+
+그럴 경우 아래와 같이 DB주소 뒤에 utf인코딩을 추가.
+
+conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/webdb?useUnicode=true&characterEncoding=utf8", "root", "12345");
+
+* html에서 request로 넘기는 데이터가 넘기는 도중에 깨질 수도 있으니 jsp단에서
+
+<fmt:requestEncoding value="UTF-8"/>
+
+로 전달시 깨짐 미리 방지해둘 것.

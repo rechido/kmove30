@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry excluding="Person.java|PersonInfo.java|JDBC_Person.java|chap19/WindowExample8.java|com/kosea/kmove30/MybatisTest.java" kind="src" path="src"/>
+	<classpathentry kind="src" path="properties"/>
+	<classpathentry kind="lib" path="resources/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="resources/mail.jar"/>
+	<classpathentry kind="lib" path="resources/mybatis-3.2.3.jar"/>
+	<classpathentry kind="lib" path="resources/mysql-connector-java-5.1.46.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
