@@ -22,7 +22,7 @@
 				<td>${GOODS_LIST.code[cnt] }</td>
 				<td>${GOODS_LIST.title[cnt] }</td>
 				<td>${GOODS_LIST.writer[cnt] }</td>
-				<td>${GOODS_LIST.price[cnt] }</td>
+				<td><fmt:formatNumber value="${GOODS_LIST.price[cnt] }" type="currency"/></td>
 			</tr>
 		</c:forEach>
 	</table>
