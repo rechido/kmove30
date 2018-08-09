@@ -19,21 +19,21 @@
        rs.next();
        if(rs.getInt(1) > 0) {
  %>
-      <center>
+      
          <h4>아이디(id) 중복 !!!</h4>
          <img src="img/warning.gif"><br><br>
          <font size=2>입력한 아이디(id)는 사용중입니다.</font><br>
          <a href="JavaScript:window.close()">닫기</a>
-      </center>
+      
 <%
        } else {
 %>
-      <center>
+      
          <h4>사용 가능합니다 !!!</h4>
          <img src="img/cong.gif"><br><br>
          <font size=2>입력한 아이디(id)는 사용 가능합니다.</font><br>
          <a href="JavaScript:window.close()">계속하기</a>
-      </center>
+      
 <%
        }
      rs.close();

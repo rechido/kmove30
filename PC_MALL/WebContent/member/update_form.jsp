@@ -42,7 +42,7 @@
 		</HEAD>
 
 <BODY bgcolor="#E0EEE0">
-<center><br>
+<br>
 <form name=mform method=post action="update.jsp" >
 	<table cellpadding=3 cellspacing=0 border=1 width=550 align=center>       
 		<tr bgcolor=#7aaad5 height=30>

@@ -108,7 +108,7 @@ function  go_update(){
 	<input type="hidden" name="b_id" value="<%=b_id%>">
 </form>
 </table>
-</center>
+
 		<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
 </body>
 </html>

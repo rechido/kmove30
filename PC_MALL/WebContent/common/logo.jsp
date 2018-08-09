@@ -16,7 +16,7 @@
 <%
 				if( session.getAttribute("pid") != null) {
  %>
-					([<%=pname%>]
+					([<%=pid%>]
 <%
 				}
  %>			님의 방문을 진심으로 환영합니다</font></marquee></div>

@@ -1,4 +1,5 @@
 <%@ page  contentType="text/html;charset=utf-8" import="java.sql.*,oracle.dbpool.*" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <HTML>
 	<HEAD>
@@ -11,7 +12,7 @@
     <jsp:include page="../common/basic_screen.jsp" flush="true"/>
 	
 <!--  신상품 화면    -->
-	<center><br>
+	<br>
 	<table border=1 width=500 height=30>
 		<tr>
 			<td align=center bgcolor=0063ce><font size=2 color=white><b>신 상 품</b></td>
@@ -45,7 +46,7 @@
 				<table width="250" border=1 cellpadding=1 cellspacing=2 align=center bordercolor=#990000>
 				<tr>
 					<td colspan=2 align="center"><a href="../product/product.jsp?i=<%= id%>">
-					<img src="../productimg/<%=photo%>" width=100 height=100 border=0></a></td>
+					<img src="../product/image/<%=photo%>" width=100 height=100 border=0></a></td>
 				</tr>
 				<tr>
 					<td width=60 align=right bgcolor=#7eaee9>상품명</td>
@@ -53,7 +54,7 @@
 				</tr>
 				<tr>
 					<td width=60 align=right bgcolor=#7eaee9>가격</td>
-					<td bgcolor=cde6ff>&nbsp;&nbsp;<%=price%>&nbsp;원</td>
+					<td bgcolor=cde6ff>&nbsp;&nbsp;<fmt:formatNumber value="<%=price%>"	pattern="#,###" />&nbsp;원</td>
 				</tr>
 				<tr>
 					<td width=60 align=right bgcolor=#7eaee9>제조회사</td>
@@ -76,7 +77,7 @@
 			<table width="250" border=1 cellpadding=1 cellspacing=2 align=center bordercolor=#990000>
 			<tr>
 				<td colspan=2 align="center"><a href="../product/product.jsp?i=<%= id%>">
-				<img src="../productimg/<%=photo%>" width=100 height=100 border=0></a></td>
+				<img src="../product/image/<%=photo%>" width=100 height=100 border=0></a></td>
 			</tr>
 			<tr>
 				<td width=60 align=right bgcolor=#7eaee9>상품명</td>
@@ -84,7 +85,7 @@
 			</tr>
 			<tr>
 				<td width=60 align=right bgcolor=#7eaee9>가격</td>
-				<td bgcolor=cde6ff>&nbsp;&nbsp;<%=price%>&nbsp;원</td>
+				<td bgcolor=cde6ff>&nbsp;&nbsp;<fmt:formatNumber value="<%=price%>"	pattern="#,###" />&nbsp;원</td>
 			</tr>
 			<tr>
 				<td width=60 align=right bgcolor=#7eaee9>제조회사</td>
@@ -112,8 +113,7 @@
 	out.println(e);
 }
 %>
-	</table>
-	</center>  
+	</table> 
 
 <!--  화면 끝   -->
 	<jsp:include page="../common/basic_copyright.jsp" flush="true"/>

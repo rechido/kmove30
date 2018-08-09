@@ -11,6 +11,11 @@
 			document.bbs_form.b_title.focus();
 			return ;
 		}
+		if(document.bbs_form.b_title.value.length > 40){
+			alert("제목이 너무 깁니다.");
+			document.bbs_form.b_title.focus();
+			return ;
+		}
 	
 		if(!document.bbs_form.pwd.value) {
 			alert("비밀번호를 입력하세요.");

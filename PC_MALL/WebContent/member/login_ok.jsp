@@ -25,13 +25,13 @@
 
 			<script language="JavaScript"> 
 				alert("등록되어 있지 않은 아이디입니다.");
-				history.go(-1); 
+				history.go(-1); // 1단계 이전 페이지로 이동
 			</script>
 
  <% }
 		
         if(uid.equals(mem_uid) && pwd.equals(mem_pwd)) {
-			
+			// 세션 영역에 세션 키와 값을 저장
 		    session.setAttribute("pid",uid);	 //회원아이디
 			session.setAttribute("pname",name);	 //회원 이름
 			session.setAttribute("pmember","y"); //회원 인지 아닌지..

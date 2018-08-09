@@ -41,7 +41,7 @@ try {
 
 %>
 
-<center>
+
 		<table>
 		<tr>
             <td width=600><b><font face="aroha" >&nbsp;[<%=pid%>]회원님의 주문하실 공동구매 내역입니다. </font></b></td>
@@ -49,7 +49,7 @@ try {
 		</tr>
 		</table>
 <font size=2 color="#39599c"><b><%=pid%></b></font><font size=2>님이 주문하신 상품은 아래와 같습니다</font>
-</center>
+
 
 
 <table border="0" cellpadding='0' cellspacing='0' width='620' align="center">

@@ -37,7 +37,7 @@
 		Connection con = pool.getConnection("ora8");
  
 		String  b_name, b_email, b_title, b_content, b_date, mailto;
-		int  b_id =0 , b_hit = 0, level=0, color=1 ;
+		int  b_id =0 , b_hit = 0, level=0, color=1;
 
 		// DB 행의 수 계산
 		Statement stmt = con.createStatement();  
@@ -124,7 +124,7 @@
 			<td width=350  align=center valign=middle height=30>
   
 <%		// 페이지 구현부
-			 int limit = 4 ;   //페이지 리스트 개수 지정
+			 int limit = 10 ;   //페이지 리스트 개수 지정
 			 //시작 페이지 구하기
 			 int temp =(pageNUM-1) % limit ;
 			 int startPage = pageNUM - temp;

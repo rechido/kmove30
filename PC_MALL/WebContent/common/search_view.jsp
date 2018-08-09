@@ -1,3 +1,5 @@
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page contentType="text/html;charset=utf-8" import="java.sql.*,oracle.dbpool.*"  %>
 
 <HTML>
@@ -13,12 +15,25 @@
 <%
 	DBConnectionManager pool = DBConnectionManager.getInstance();
 	Connection con = pool.getConnection("ora8");
-
+	
+	Statement stmt0=con.createStatement();
 	Statement stmt=con.createStatement();
 	Statement stmt1=con.createStatement();
 	String s_word=new String(request.getParameter("srch_word").getBytes("8859_1"),"utf-8");
+	
+	
 
 	try {
+		ResultSet rs0=stmt.executeQuery("select id,name from product ");
+		ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
+		int cnt=0;
+		while(rs0.next()){
+			list.add(new HashMap<String, String>());
+			list.get(cnt).put("pid", rs0.getInt(1));
+			
+		}
+		
+		
 		String name,company_id,expression,photo,category;
 		int id,price,count;
 		ResultSet rs=stmt.executeQuery("select id,name,price,company_id,expression,photo,category from product where name like '%"+s_word+"%' ");
@@ -27,7 +42,7 @@
 		while(rs1.next()) {
 		count=rs1.getInt(1);
 %>   
-		<center>
+		
 		<font color=red><%= s_word %></font> 에 대한 
 		<font color=red><%= count %></font> 개의 제품 검색결과 입니다!<br>
 <%
@@ -73,7 +88,7 @@
 	}
 %>
 		</table>
-		</center>
+		
 		<!--  검색 끝 -->
 	<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
 </BODY>

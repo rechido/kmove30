@@ -12,7 +12,7 @@
     <jsp:include page="../common/basic_screen.jsp" flush="true"/>
 	
 <!--  화면 설계   -->
-<center><br>
+<br>
   <table border=1 width=550 height=30 bordercolor=black>
 	<tr>
 		<td align=center bgcolor=0063ce><font color=white><b>조립 PC 견적</b></td>
@@ -80,7 +80,7 @@
 </table>
 </form>
   
-</center>
+
 <!--  화면 끝   -->
 	<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
 </BODY>

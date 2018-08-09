@@ -26,7 +26,7 @@ try {
 	Statement stmt = con.createStatement();
 	ResultSet rs1=stmt.executeQuery(sql1);
 %>
-	<center><br>
+	<br>
 	<table border=1 cellpadding=0 cellspacing=0 width=550 align=center>
 		<tr bgcolor=#7aaad5>
 			<td height=30 align=middle bgcolor=#ccffcc><font size=3 color=#000000><b>[<%=pid%>]님의 주문하실 상품은 아래와 같습니다.</b></font></td>

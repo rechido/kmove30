@@ -21,7 +21,7 @@ function mywinclose() {
         <jsp:include page="../common/basic_screen.jsp" flush="true"/>
 
 <!-- 공동구매 화면 설계  -->
-	 <center><br>
+	 <br>
 	  <table border=1 width=550 height=25 bordercolor=black>
 		<tr>
 			<td align=center bgcolor=0063ce><font size=2 color=white><b>공 동 구 매</b></td>
