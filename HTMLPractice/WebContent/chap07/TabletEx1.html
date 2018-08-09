@@ -76,6 +76,7 @@ a {
 <style type="text/css">
 #wrap {
 	overflow: hidden;
+	background: #71b1d1;
 }
 #wrap>#main_lnb{
 	float: left;
@@ -89,11 +90,36 @@ a {
 #wrap>#content_wrap>#content{
 	padding-right: 200px;
 }
+#main_lnb>ul>li>a{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 15px;
+	
+	border-top: 1px solid #96d6f6;
+	border-bottom: 1px solid #6298b2;
+	color: white;
+	font-weight: bold;
+}
 </style>
-<!-- 수직 목록 -->
-<style type="text/css"></style>
+<!-- 본문 -->
+<style type="text/css">
+#content{
+	background: white;
+	border-left: 1px solid black;
+}
+article{
+	padding: 10px;
+}
+</style>
 <!-- 푸터 -->
-<style type="text/css"></style>
+<style type="text/css">
+#main_footer{
+	padding: 10px;
+	border-top: 3px solid black;
+	text-align: center;
+}
+</style>
 </head>
 <body>
 	<header id="main_header">
@@ -167,5 +193,11 @@ a {
 			</div>
 		</div>
 	</div>
+	<footer id="main_footer">
+		<h3>HTML + CSS3 Basic</h3>
+		<address>Website Layout Basic</address>
+	</footer>
+	
+	
 </body>
 </html>
