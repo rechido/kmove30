@@ -1,7 +1,11 @@
-<%@page import="java.util.HashMap"%>
-<%@page import="java.util.ArrayList"%>
+<%@ page import="org.apache.log4j.*" %>
 <%@ page contentType="text/html;charset=utf-8" import="java.sql.*,oracle.dbpool.*"  %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
+<%
+	Logger logger = Logger.getLogger(this.getClass());
+	logger.info("로그 시작.");
+%>
 <HTML>
 	<HEAD>
 		<TITLE>컴퓨터 전문쇼핑몰</TITLE>
@@ -16,28 +20,20 @@
 	DBConnectionManager pool = DBConnectionManager.getInstance();
 	Connection con = pool.getConnection("ora8");
 	
-	Statement stmt0=con.createStatement();
 	Statement stmt=con.createStatement();
 	Statement stmt1=con.createStatement();
 	String s_word=new String(request.getParameter("srch_word").getBytes("8859_1"),"utf-8");
-	
+	logger.info("검색명: " + s_word);
 	
 
 	try {
-		ResultSet rs0=stmt.executeQuery("select id,name from product ");
-		ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
-		int cnt=0;
-		while(rs0.next()){
-			list.add(new HashMap<String, String>());
-			list.get(cnt).put("pid", rs0.getInt(1));
 			
-		}
-		
+	
 		
 		String name,company_id,expression,photo,category;
 		int id,price,count;
-		ResultSet rs=stmt.executeQuery("select id,name,price,company_id,expression,photo,category from product where name like '%"+s_word+"%' ");
-		ResultSet rs1=stmt1.executeQuery("select count(*) from product where name like '%"+s_word+"%'");
+		ResultSet rs=stmt.executeQuery("select id,name,price,company_id,expression,photo,category from product where lower(name) like lower('%"+s_word+"%') ");
+		ResultSet rs1=stmt1.executeQuery("select count(*) from product where lower(name) like lower('%"+s_word+"%') ");
 
 		while(rs1.next()) {
 		count=rs1.getInt(1);
@@ -73,7 +69,7 @@
 			<tr bgcolor="edf5fe"> 
 				<td align=center><img border=0 name=PicMedium height=30 width=30 src="../product/image/<%=photo%>"></td>
 				<td  height=30>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../product/product.jsp?i=<%= id%>"> <%=name%></a></td>
-				<td  height=30>&nbsp;&nbsp;&nbsp;&nbsp;<%=price%>원</td>
+				<td  height=30>&nbsp;&nbsp;&nbsp;&nbsp;<fmt:formatNumber value="<%=price%>" pattern="#,###" />&nbsp;원</td>
 			</tr>
 <%	
 			}

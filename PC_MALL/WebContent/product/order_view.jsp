@@ -19,7 +19,7 @@
 <%
 	String pid =(String)session.getAttribute("pid");
 	String sql1="select id,name,price,qty from basket_view where user_id= '"+pid+"'";
-	String sql2="select mem_uid,mem_name,mem_email,mem_address,mem_phone from member where mem_uid ='"+ pid+ "'";
+	String sql2="select m_uid,m_name,m_email,m_address,m_phone from member where m_uid ='"+ pid+ "'";
 try {
 	DBConnectionManager pool = DBConnectionManager.getInstance();
 	Connection con = pool.getConnection("ora8");
