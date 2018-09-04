@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MineSweeper.jnlp">
+  <information>
+    <title>MineSweeper</title>
+    <vendor>D. E. Lee</vendor>
+    <description>MineSweeper</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MineSweeper.jar" size="9857" download="eager" />
+    <jar href="libs\log4j-1.2.17.jar" size="489883" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="application.Main"  name="MineSweeper" />
+  <update check="background"/>
+</jnlp>
