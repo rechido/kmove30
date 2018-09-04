@@ -11,8 +11,11 @@ input:enabled {
 input:disabled {
 	background-color: gray;
 }
+
 input:focus {
+	outline: 0; /* 크롬에선 강제로 border를 파란색으로 입히므로 그걸 제거해줌 */
 	background-color: orange;
+	border: solid 1px green;
 }
 </style>
 </head>

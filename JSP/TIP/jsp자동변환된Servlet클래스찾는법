@@ -1,9 +1,0 @@
-JSP 자동 변환된 Servlet class 파일 찾는 법 (tomcat 폴더에 없음)
-1. Servers tab 선택
-2. Tomcat server 더블클릭
-3. Open launch configuration
-4. Arguments에서 VM Arguments 보면 catalina base 폴더명이 나옴.
-ex)  -Dcatalina.base="D:\Workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0"
-
-위 폴더로 들어가 자신이 만든 jsp project 폴더를 찾는다
-ex) D:\Workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\work\Catalina\localhost\JSP\org\apache\jsp

@@ -1,7 +1,0 @@
-* 교재에서 제시하는 jstl은 구버전이라 현재는 사용 불가능
-D:\Download\apache-tomcat-8.0\webapps\examples\WEB-INF\lib 에서 
-taglibs-standard-impl-1.2.5.jar
-taglibs-standard-spec-1.2.5.jar
-를 찾아서 ../WebContent/WEB_INF/lib/ 안에 깔것
-
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    

@@ -12,6 +12,7 @@ a:visited {
 	color: red;
 }
 
+/* href 속성을 가지고 있는 a 태그 뒤의 공간에 "- href 속성"을 추가합니다. */
 a:link::after {
 	content: " - " attr(href);
 }

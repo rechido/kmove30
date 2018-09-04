@@ -10,9 +10,12 @@
 <title>파일 업로드</title>
 </head>
 <body>
+
+<%= application.getRealPath("/") %>
 	제목: ${param.title }<br/>
 	설명: ${param.description }<br/>
 	파일: ${param.file_name }<br/>
+	파일: ${param.file_name2 }<br/>
 	파일이 업로드되었습니다.
 </body>
 </html>
