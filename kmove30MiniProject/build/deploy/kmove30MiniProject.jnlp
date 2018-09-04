@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="kmove30MiniProject.jnlp">
+  <information>
+    <title>kmove30MiniProject</title>
+    <vendor>D.E.Lee</vendor>
+    <description>MessengerApp</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="kmove30MiniProject.jar" size="50820" download="eager" />
+    <jar href="libs\log4j-1.2.17.jar" size="489883" download="eager" />
+    <jar href="libs\mybatis-3.2.3.jar" size="713557" download="eager" />
+    <jar href="libs\mysql-connector-java-5.1.46.jar" size="1004838" download="eager" />
+    <jar href="resource\log4j-1.2.17.jar" size="489883" download="eager" />
+    <jar href="resource\mybatis-3.2.3.jar" size="713557" download="eager" />
+    <jar href="resource\mysql-connector-java-5.1.46.jar" size="1004838" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="messenger.MainApp"  name="MessengerApp" />
+  <update check="background"/>
+</jnlp>
