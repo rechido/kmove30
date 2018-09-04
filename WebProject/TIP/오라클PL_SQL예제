@@ -1,5 +1,0 @@
-BEGIN
-FOR cnt IN 2..100 LOOP
-insert into sc_bbs_post(b_id, b_nickname, b_pwd, b_title) values(cnt, '리치도', '1234', '테스트');
-END LOOP;
-END;
