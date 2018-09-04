@@ -1,5 +1,0 @@
-perspective - server - tomcat server 더블클릭 - server options - serve modules without publishing 선택
-
-개발(테스트)시에는 체크하여 사용하고 실제 서비스 시에는 퍼블리싱 해야함.
-
-* 파일 업로드 시 실제 서버 경로가 아닌 eclipse 상으로 업로드 시키는 게 가능. 
